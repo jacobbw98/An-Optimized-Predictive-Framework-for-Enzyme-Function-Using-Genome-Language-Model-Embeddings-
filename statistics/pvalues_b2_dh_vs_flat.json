@@ -1,0 +1,31 @@
+{
+ "dataset": "benchmark-2 valid, per-AC (first EC per AC), all ACs present in the 4 embedding layers",
+ "models": {
+  "dh_mlp": "benchmark-2 DeepHierarchicalEC_MLP, level-4 head, simple readout",
+  "flat_mlp": "benchmark-2 flat EC_MLP (layer 18, 4096-dim)"
+ },
+ "n_pairs": 255741,
+ "n_classes": 4640,
+ "acc_dh_mlp": 0.7658607732041401,
+ "acc_flat_mlp": 0.725006940615701,
+ "paired_ttest_rel": {
+  "t": 61.271191807334354,
+  "p": 0.0,
+  "note": "per-AC full-EC correctness, DH-MLP vs flat MLP",
+  "df": 255740,
+  "log10_p_exact": -813
+ },
+ "dh_mlp_vs_chance": {
+  "p0": 0.00021551724137931034,
+  "p": 0.0,
+  "k": 195862,
+  "log10_p_exact": -657694
+ },
+ "flat_mlp_vs_chance": {
+  "p0": 0.00021551724137931034,
+  "p": 0.0,
+  "k": 185414,
+  "log10_p_exact": -614508
+ },
+ "note": "p underflows float64; log10_p_exact via log-space (t: regularized incomplete beta; binom: gammaln pmf + geometric tail ratio)"
+}

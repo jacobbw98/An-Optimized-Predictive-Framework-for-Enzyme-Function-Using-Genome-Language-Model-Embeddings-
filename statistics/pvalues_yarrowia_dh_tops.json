@@ -1,0 +1,21 @@
+{
+ "dataset": "Yarrowia, EC_Numbers != 'UP' (predict_yarrowia_ec_deep.py convention)",
+ "model": "benchmark-2 DH-MLP (DeepHierarchicalEC_MLP, level-4 head, simple readout)",
+ "n": 1126,
+ "n_classes_l4": 4640,
+ "top1": {
+  "n_hit": 324,
+  "acc": 0.2877442273534636,
+  "p0": 0.00021551724137931034,
+  "p": 0.0,
+  "log10_p_exact": -896
+ },
+ "top3": {
+  "n_hit": 454,
+  "acc": 0.40319715808170514,
+  "p0": 0.000646551724137931,
+  "p": 0.0,
+  "log10_p_exact": -1120
+ },
+ "note": "p underflows float64; log10_p_exact from log-space binomial tail (gammaln + geometric tail ratio)"
+}
